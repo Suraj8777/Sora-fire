@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Clone - Blackout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="lobby">
+        <h1>Welcome to Free Fire Clone</h1>
+        <p>Created by Grok 3 (xAI)</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="status">Players Remaining: <span id="playerCount">10</span></div>
+        <div id="storm">Safe Zone: <span id="stormRadius">500</span></div>
+        <div id="weapon">Weapon: <span id="playerWeapon">None</span></div>
+        <div id="health">Health: <span id="playerHealth">100</span></div>
+        <div id="minimap"></div>
+        <button id="fighting-button" onclick="userPlayer.shoot()">Fight!</button>
+        <div id="controls">
+            <button id="move-up" onclick="movePlayer('up')">↑</button>
+            <button id="move-down" onclick="movePlayer('down')">↓</button>
+            <button id="move-left" onclick="movePlayer('left')">←</button>
+            <button id="move-right" onclick="movePlayer('right')">→</button>
+        </div>
+    </div>
+    <div id="creator-controls" style="display: none;">
+        <h2>Creator Controls</h2>
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="toggleStorm()">Toggle Storm</button>
+        <button onclick="spawnWeapon()">Spawn Weapon</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
